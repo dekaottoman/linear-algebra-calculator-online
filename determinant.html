@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="determinant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <title>Linear Algebra Calculator || det(A) of a Matrix</title>
+</head>
+<body>
+    <nav class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menu">
+            <a href="index.html" class="logo-link">LACO</a>
+            <a href="under_construction.html">How to Use</a>
+            <a href="under_construction.html">About</a>
+            <a href="https://github.com/dekaottoman" target="_blank">@dekaottoman</a>
+        </div>
+    </nav>
+    <div class="input-area">
+        <h1>Determinant Calculation</h1>
+        <div class="table-container" id="display">
+        
+        </div>
+        <button class="calculator-btn" onclick="sarrus('result')">Calculate</button>
+    </div>
+    
+    <div class="result-box">
+        <h1>det(A) of the Matrix</h1>
+        <h2 id="result">det(A)</h2>
+    </div>
+
+
+</body>
+<script src="table.js"></script>
+<script>
+    document.body.addEventListener('load', generate_table(3,3,'display'))
+    function sarrus(display_id){
+        var C11 = document.getElementById("C11").value;
+        var C12 = document.getElementById("C12").value;
+        var C13 = document.getElementById("C13").value;
+        var C21 = document.getElementById("C21").value;
+        var C22 = document.getElementById("C22").value;
+        var C23 = document.getElementById("C23").value;
+        var C31 = document.getElementById("C31").value;
+        var C32 = document.getElementById("C32").value;
+        var C33 = document.getElementById("C33").value;
+        
+        var detA = ((C11*C22*C33) + (C21*C32*C13) + (C31*C12*C23)) - ((C13*C22*C31) + (C23*C32*C11) + (C33*C12*C21));
+        document.getElementById(display_id).innerHTML = detA;
+    }
+</script>
+</html>

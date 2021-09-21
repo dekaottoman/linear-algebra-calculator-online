@@ -1,0 +1,62 @@
+.input-area{
+    max-width: 1080px;
+    width: 80%;
+    min-width: 350px;
+    max-height: 40%;
+    background-color: rgba(39, 48, 54, 0.75);
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 2px #ecf0f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input-area h1{
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+    border-collapse: collapse;
+    background-color: #273036;
+    color: #ecf0f1;
+}
+
+.table-container{
+    width: 100%;
+    min-width: 350px;
+    max-height: 40%;
+    overflow: scroll;
+    scrollbar-width: thin;
+    background-color: #273036;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.tbl-in{
+    margin: 15px 0 0 0;
+    text-align: center;
+    padding: 7px 14px;
+    font-size: large;
+    width: 120px;
+}
+
+.table-container table{
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+.table-container td{
+    text-align: center;
+    padding: 7px;
+}
+
+.table-container table input{
+    width: 40px;
+    padding: 7px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+    .table-container{
+        max-height: 400px;
+    }
+}
