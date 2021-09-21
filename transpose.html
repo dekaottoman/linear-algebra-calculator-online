@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="transpose.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <title>Linear Algebra Calculator || Transpose of a Matrix</title>
+</head>
+<body>
+    <nav class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menu">
+            <a href="index.html" class="logo-link">LACO</a>
+            <a href="under_construction.html">How to Use</a>
+            <a href="under_construction.html">About</a>
+            <a href="https://github.com/dekaottoman" target="_blank">@dekaottoman</a>
+        </div>
+    </nav>
+    <div class="input-area">
+        <h1>Input Matrix</h1>
+        <div class="table-container" id="display">
+        
+        </div>
+        <input type="number" class="tbl-in" id="row_c" value="3" placeholder="Row Count">
+        <br>
+        <input type="number" class="tbl-in" id="col_c" value="3" placeholder="Column Count">
+        <br>
+        <button class="calculator-btn" onclick="generate_input()">Generate</button>
+        <br>
+        <button class="calculator-btn" onclick="transpose('result')">Calculate</button>
+    </div>
+    
+    <div class="result-table">
+        <h1>Resultant Matrix</h1>
+        <div id="result">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+<script src="table.js"></script>
+<script>
+    document.body.addEventListener('load', generate_table(3,3,'display'))
+    
+    function generate_input(){
+        var x = document.getElementById("row_c").value;
+        var y = document.getElementById("col_c").value;
+        generate_table(x,y,'display');
+    }
+
+    function transpose(display_id){
+        var x = document.getElementById("row_c").value;
+        var y = document.getElementById("col_c").value;
+        generate_output_table(x,y,display_id);
+        for(var i = 0; i < x; i++){
+            for(var j = 0; j< y; j++){
+                document.getElementById("OC"+(j+1)+(i+1)).innerHTML = document.getElementById("C"+(i+1)+(j+1)).value;
+            }
+        }
+    }
+</script>
+</html>

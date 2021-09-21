@@ -1,0 +1,63 @@
+.mahmut{
+    width: 80%;
+    min-width: 350px;
+    background-color: rgba(39, 48, 54, 0.75);
+    margin: 10px auto;
+    color: #ecf0f1;
+    padding: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    border: solid 2px #ecf0f1;
+    border-radius: 10px
+}
+
+.efe{
+    width: 80%;
+    min-width: 350px;
+    background-color: rgba(39, 48, 54, 0.75);
+    margin: 10px auto;
+    color: #ecf0f1;
+    padding: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    border: solid 2px #ecf0f1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.operation-card{
+    display: block;
+    width: calc(100% - 44);
+    max-width: 400px;
+    margin: 15px auto;
+    background-color: #273036;
+    padding: 20px;
+    border: solid 2px #ecf0f1;
+    border-radius: 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.operation-card:hover{
+    background-color: #ecf0f1;
+    border: solid 2px #dcdde1;
+    color: #273036;
+}
+
+.mahmut h1{
+    text-align: center;
+}
+
+.mahmut h2{
+    text-align: center;
+}
+
+.mahmut p{
+    margin: 15px 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 980px){
+    .mahmut p{
+        margin-top: 17px;
+        text-align: justify;
+    }
+}
