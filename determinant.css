@@ -3,7 +3,7 @@
     width: 80%;
     min-width: 350px;
     max-height: 40%;
-    background-color: rgba(39, 48, 54, 0.75);
+    background-color: rgba(25, 113, 164, 0.75);
     margin: 20px auto;
     text-align: center;
     border: solid 2px #ecf0f1;
@@ -15,7 +15,7 @@
     text-align: center;
     border-bottom: 2px solid #ecf0f1;
     border-collapse: collapse;
-    background-color: #273036;
+    background-color: #1971a4;
     color: #ecf0f1;
 }
 

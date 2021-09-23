@@ -7,7 +7,7 @@ body{
     text-align: left;
     height: 70px;
     line-height: 70px;
-    background-color: #273036;
+    background-color: #1971a4;
     position: fixed;
     top: 0;
     width: 100%;
@@ -65,7 +65,7 @@ label {
     .menu a {
         display: block;
         border-bottom: 4px solid #ecf0f1;
-        background-color: rgba(39, 48, 54, 0.95);
+        background-color: rgba(25, 113, 164, 0.7);
         margin: 0;
     }
 

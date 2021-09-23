@@ -1,7 +1,7 @@
 .mahmut{
     width: 80%;
     min-width: 350px;
-    background-color: rgba(39, 48, 54, 0.75);
+    background-color: rgba(25, 113, 164, 0.75);
     margin: 10px auto;
     color: #ecf0f1;
     padding: 20px;
@@ -13,7 +13,7 @@
 .efe{
     width: 80%;
     min-width: 350px;
-    background-color: rgba(39, 48, 54, 0.75);
+    background-color: rgba(25, 113, 164, 0.75);
     margin: 10px auto;
     color: #ecf0f1;
     padding: 20px;
@@ -28,7 +28,7 @@
     width: calc(100% - 44);
     max-width: 400px;
     margin: 15px auto;
-    background-color: #273036;
+    background-color: rgb(25, 113, 164);
     padding: 20px;
     border: solid 2px #ecf0f1;
     border-radius: 10px;
@@ -39,7 +39,7 @@
 .operation-card:hover{
     background-color: #ecf0f1;
     border: solid 2px #dcdde1;
-    color: #273036;
+    color: #1971a4;
 }
 
 .mahmut h1{
