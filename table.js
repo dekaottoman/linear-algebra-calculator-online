@@ -31,7 +31,7 @@ function generate_output_row(col_count, row_no){
 return row;
 }
 
-function generate_output_table(col_count, row_count, display_id){
+function generate_output_table( row_count,col_count,display_id){
     var table = "<table><tbody>";
     for(var i=0;i<row_count;i++){
         table += generate_output_row(col_count, i);

@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="table.css">
-    <link rel="stylesheet" href="transpose.css">
+    <link rel="stylesheet" href="const_mult.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-    <title>Linear Algebra Calculator || Transpose of a Matrix</title>
+    <title>Linear Algebra Calculator || Constant Multiplication</title>
 </head>
 <body>
     <nav class="nav">
@@ -27,7 +27,7 @@
         </div>
     </nav>
     <div class="input-area">
-        <h1>Transpose of a Matrix</h1>
+        <h1>Matrix Multiplication by Constant</h1>
         <div class="table-container" id="display">
         
         </div>
@@ -37,7 +37,9 @@
         <br>
         <button class="calculator-btn" onclick="generate_input()">Generate</button>
         <br>
-        <button class="calculator-btn" onclick="transpose('result')">Calculate</button>
+        <input type="number" class="tbl-in" id="const_val" value="3" placeholder="Constant">
+        <br>
+        <button class="calculator-btn" onclick="const_mult('result')">Calculate</button>
     </div>
     
     <div class="result-table">
@@ -77,15 +79,18 @@
         generate_table(x,y,'display');
     }
 
-    function transpose(display_id){
+    function const_mult(display_id){
         var x = document.getElementById("row_c").value;
         var y = document.getElementById("col_c").value;
-        generate_output_table(y,x,display_id);
-        for(var i = 0; i < x; i++){
-            for(var j = 0; j< y; j++){
-                document.getElementById("OC"+(j+1)+(i+1)).innerHTML = document.getElementById("C"+(i+1)+(j+1)).value;
+        var const_val = document.getElementById("const_val").value;
+        generate_output_table(x,y,display_id);
+        
+        for (var i = 0; i < x; i++ ) {
+            for (var j = 0; j < y; j++ ) {
+                document.getElementById("OC" + (i+1) + (j+1)).innerHTML = document.getElementById("C"+(i+1)+(j+1)).value*const_val;
             }
         }
+
     }
 </script>
 </html>
